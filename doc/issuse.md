@@ -36,3 +36,8 @@ bucket index + no global index
 ### hoodie.datasource.hive_sync.create_managed_table配置为hive内部表
 - 说是0.12.0后才有这个参数
 
+### flink state-based index & global enable出现重复数据
+- 怀疑是multi writer并发控制导致的重复：
+https://issues.apache.org/jira/browse/HUDI-5706   
+https://hudi.apache.org/docs/concurrency_control/#multi-writer-guarantees
+  
